@@ -16,9 +16,13 @@ app.use(bodyParser.json({ type: 'application/json'}));
 
 
 // set the routes ======================================
-app.use(require('./routes/routes'))
 
-app.get("/", (req, res) => res.json({message: "Welcome to our Bookstore!"}));
+/*---ROUTES---*/
+var users = require('./routes/routes');
+
+/*---PATHS---*/
+app.use('/api', users);
+app.get("/", (req, res) => res.json({message: "Welcome to our Node app!"}));
 
 
 app.listen(port);

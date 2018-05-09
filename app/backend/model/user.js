@@ -10,7 +10,10 @@ var userSchema = new mongoose.Schema({
   email: { type: String, min: 6, max: 30, required: true },
   created: { type: Date, default: Date.now },
   age: { type: Number, min: 18, max: 65, required: true },
-  password: { type: String, min:6, max: 16, required: true }
+  password: { type: String, min:6, max: 16, required: true },
+  admin:{type:Boolean},
+  index: true,
+  unique: true
 
 });
 
