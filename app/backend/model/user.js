@@ -11,9 +11,7 @@ var userSchema = new mongoose.Schema({
   created: { type: Date, default: Date.now },
   age: { type: Number, min: 18, max: 65, required: true },
   password: { type: String, min:6, max: 16, required: true },
-  admin:{type:Boolean},
-  index: true,
-  unique: true
+  admin:{type:Boolean}
 
 });
 
